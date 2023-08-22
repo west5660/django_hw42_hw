@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        Заголовок
+
+    {% endblock title %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'choko' id=0 %} ">Snickers</a></li>
+                <li><a href="{% url 'choko1' id=1 %}">Mars</a></li>
+                <li><a href="{% url 'choko2' id=2 %}">Nuts</a></li>
+                <li><a href="{% url 'choko3' id=3 %}">Twix</a></li>
+                <li><a href="{% url 'choko4' id=4 %}">MilkyWay</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+            <p>  <img src="{% static 'img/img_5.png'%}"width="600px" text-center>
+            <p> Конечно, польза и вред шоколада – предмет споров и больших научных исследований. Ведь это самая знаменитая и любимая многими сладость, которая имеет огромное множество вариантов с тысячами добавок, а также является компонентом многих рецептов и тортов. Польза шоколада для организма человека – неоспоримый факт. Каждый вид несёт своё влияние, но отрицать благотворное влияние не имеет смысла. Ведь он выводит токсины, улучшает сосуды, приводит в норму давление и повышает настроение. А это далеко не все сферы, в которых шоколад полезен. О вреде шоколада не любят говорить, но иногда он вызывает не самые приятные эффекты, влияя на кожу, пищеварение, сон и сердечно-сосудистую систему. Иногда возникают аллергические реакции, но это тоже не самая распространённая проблема. Главное – этот десерт провоцирует отложение лишних жиров. И всё это происходит только по одной причине – бесконтрольное употребление сладкого лакомства. Только поедание ежедневной нормы будет полезным.</p>
+        {% endblock content %}
+    </div>
+
+    <footer class="navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a href="https://snickers.ru/?r=promo/cabinet/index" style="color: #B80000;">Сайт Snickers</a></li>
+                <li><a href="https://www.marschocolatedrinksandtreats.com/" style="color: #B80000;">Сайт Mars</a></li>
+                <li><a href="https://www.nestle.md/ru/nashi-marki/sladosti/nuts" style="color: #B80000;">Сайт Nuts</a></li>
+                <li><a href="https://twix.ru/?ref=w3use.com" style="color: #B80000;">Сайт Twix</a></li>
+                <li><a href="https://milka.ru/" style="color: #B80000;">Сайт MilkyWay</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+</body>
+</html>

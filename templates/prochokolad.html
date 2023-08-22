@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Шоколадка
+{% endblock title %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>{{ k1 }}</h1>
+        <img src="{% static k2 %}" class="img-responsive" alt="Chocolate Image">
+        <p class="lead">{{ k3 }}</p>
+    </div>
+{% endblock content %}
+
+{% block link %}
+<div class="container">
+    <a href="{{ k4 }}" class="btn btn-primary">Перейти на сайт</a>
+</div>
+{% endblock link %}
